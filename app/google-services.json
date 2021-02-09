@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1000194179361",
+    "project_id": "movies-and-tv-shows-explorer",
+    "storage_bucket": "movies-and-tv-shows-explorer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000194179361:android:527aa872ee75d3c023fe60",
+        "android_client_info": {
+          "package_name": "com.ricardoteixeira.movietvshowsexplorer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000194179361-f7km6qoruvkre54t6anapfhlapdbga5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUyeR7A70H1sx3afj80Hmcjg9NF7Nvp6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000194179361-f7km6qoruvkre54t6anapfhlapdbga5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

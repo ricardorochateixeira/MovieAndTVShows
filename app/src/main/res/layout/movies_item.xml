@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/top_rated_movies_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="304dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/image_movie"
+        android:layout_width="160dp"
+        android:layout_height="224dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_movie_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="rating"
+        android:textAlignment="center"
+        android:padding="@dimen/standard_padding"
+        app:layout_constraintTop_toBottomOf="@id/image_movie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:drawableStartCompat="@drawable/ic_star" />
+
+    <TextView
+        android:id="@+id/text_movie_name"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Movie name"
+        app:layout_constraintTop_toBottomOf="@id/text_movie_rate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="@dimen/standard_padding"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

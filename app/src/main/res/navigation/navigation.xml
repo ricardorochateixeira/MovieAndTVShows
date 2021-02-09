@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.movies.MoviesFragment"
+        android:label="MoviesFragment" />
+    <fragment
+        android:id="@+id/tvShowsFragment"
+        android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.tvshows.TvShowsFragment"
+        android:label="TvShowsFragment" />
+    <fragment
+        android:id="@+id/watchNextFragment"
+        android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.watchnext.WatchNext"
+        android:label="WatchNext" />
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.people.PeopleFragment"
+        android:label="PersonalitiesFragment" />
+</navigation>
