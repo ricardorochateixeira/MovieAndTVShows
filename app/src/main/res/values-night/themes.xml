@@ -12,12 +12,12 @@
         <item name="colorSecondaryVariant">@color/yellow</item>
         <item name="colorOnSecondary">@color/darkGrey</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
 
     <style name="Custom.ActionBar" parent="Widget.MaterialComponents.Light.ActionBar.Solid">
-        <item name="background">@color/mediumGrey</item>
+        <item name="background">@color/yellow</item>
     </style>
 </resources>
 

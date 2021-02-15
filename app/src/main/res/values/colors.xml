@@ -16,4 +16,9 @@
     <color name="lightBlue">#5499C7</color>
     <color name="mediumBlue">#2471A3</color>
     <color name="darkBlue">#154360</color>
+
+
+    <color name="lightRed">#EC7063</color>
+    <color name="mediumRed">#CB4335 </color>
+    <color name="darkRed">#943126</color>
 </resources>
