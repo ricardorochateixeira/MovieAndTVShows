@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:paddingStart="@dimen/standard_padding"
+        android:paddingEnd="@dimen/standard_padding"
         android:background="?attr/colorPrimaryVariant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +37,7 @@
     <TextView
         android:id="@+id/text_top_rated_movies"
         android:textSize="@dimen/standard_title_size"
-        android:text="@string/top_rated_tezt"
+        android:text="@string/top_rated"
         android:layout_margin="@dimen/standard_margin"
         app:layout_constraintTop_toBottomOf="@+id/rv_popular_movies"
         app:layout_constraintStart_toStartOf="parent"

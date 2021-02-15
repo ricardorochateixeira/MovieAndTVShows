@@ -7,11 +7,12 @@ import com.google.firebase.ktx.Firebase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.android.internal.managers.ApplicationComponentManager
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 object LoginModule {
 
     @Provides
@@ -24,6 +25,4 @@ object LoginModule {
     fun provideDatabaseReference(): DatabaseReference {
         return FirebaseDatabase.getInstance().getReference("Names")
     }
-
-
 }

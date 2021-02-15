@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/moviesFragment">
 
     <fragment
         android:id="@+id/moviesFragment"
         android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.movies.MoviesFragment"
-        android:label="MoviesFragment" />
+        android:label="Movies"
+        tools:layout="@layout/movies_fragment"/>
     <fragment
         android:id="@+id/tvShowsFragment"
         android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.tvshows.TvShowsFragment"
-        android:label="TvShowsFragment" />
+        android:label="Tv Shows"
+        tools:layout="@layout/tv_shows_fragment"/>
     <fragment
         android:id="@+id/watchNextFragment"
         android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.watchnext.WatchNext"
-        android:label="WatchNext" />
+        android:label="Watch Next"
+        tools:layout="@layout/watch_next_fragment"/>
     <fragment
         android:id="@+id/peopleFragment"
         android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.people.PeopleFragment"
-        android:label="PersonalitiesFragment" />
+        android:label="Personalities"
+        tools:layout="@layout/people_fragment"/>
 </navigation>

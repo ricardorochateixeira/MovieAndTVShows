@@ -6,16 +6,22 @@
 
     <application
         android:name=".app.MoviesTvShowsApplication"
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_cover_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTVShowsExplorer">
 
         <activity android:name=".app.presentation.MainActivity"/>
+        <activity android:name=".app.presentation.login.LoginActivity"
+            android:noHistory="true"/>
+        <activity android:name=".app.presentation.register.RegisterActivity"
+            android:noHistory="true"/>
+        <activity android:name=".app.presentation.welcome.WelcomeActivity"
+            android:noHistory="true"/>
 
-        <activity android:name=".app.presentation.loginregister.LoginRegisterActivity" >
+        <activity android:name=".app.presentation.splash.SplashActivity"
+            android:noHistory="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />

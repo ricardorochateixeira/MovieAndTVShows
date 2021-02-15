@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.MovieTVShowsExplorer" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/mediumBlue</item>
-        <item name="colorPrimaryVariant">@color/darkBlue</item>
-        <item name="colorOnPrimary">@color/lightBlue</item>
+        <item name="colorPrimary">@color/mediumRed</item>
+        <item name="colorPrimaryVariant">@color/darkRed</item>
+        <item name="colorOnPrimary">@color/lightRed</item>
         <item name="android:textColorPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/darkBlue</item>
