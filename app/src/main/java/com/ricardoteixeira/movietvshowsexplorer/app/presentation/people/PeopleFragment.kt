@@ -9,7 +9,4 @@ import com.ricardoteixeira.movietvshowsexplorer.R
 class PeopleFragment: Fragment(R.layout.people_fragment) {
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:ools="http://schemas.android.com/tools"
-    android:id="@+id/welcomeActivity"
+    android:id="@+id/welcome_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     ools:context=".app.presentation.welcome.WelcomeActivity">
@@ -15,7 +16,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <ImageView
-        android:id="@+id/image_cover"
+        android:id="@+id/image_cover_welcome_activity"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_margin="@dimen/standard_margin"
@@ -26,7 +27,7 @@
         android:contentDescription="@string/application_logo"/>
 
     <TextView
-        android:id="@+id/text_movies_and_tv_shows"
+        android:id="@+id/text_movies_and_tv_shows_welcome_activity"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/double_standard_margin"
@@ -36,7 +37,7 @@
         android:textSize="@dimen/standard_title_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_cover"
+        app:layout_constraintTop_toBottomOf="@+id/image_cover_welcome_activity"
         app:layout_constraintVertical_bias="0.15" />
 
     <Button
@@ -48,7 +49,7 @@
         android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/text_movies_and_tv_shows"
+        app:layout_constraintTop_toBottomOf="@id/text_movies_and_tv_shows_welcome_activity"
         app:layout_constraintVertical_bias="0.25"
         android:layout_margin="@dimen/standard_margin"/>
 
@@ -61,12 +62,12 @@
         android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/text_movies_and_tv_shows"
+        app:layout_constraintTop_toBottomOf="@id/text_movies_and_tv_shows_welcome_activity"
         app:layout_constraintVertical_bias="0.25"
         android:layout_margin="@dimen/standard_margin"/>
 
     <TextView
-        android:id="@+id/text_do_not_want_to_register"
+        android:id="@+id/text_do_not_want_to_register_welcome_Activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/double_standard_margin"
@@ -78,7 +79,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/text_enter_as_guest"
+        android:id="@+id/text_enter_as_guest_welcome_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_as_a_guest"
@@ -86,7 +87,7 @@
         android:paddingEnd="@dimen/standard_padding"
         android:layout_marginTop="@dimen/double_standard_margin"
         android:textSize="@dimen/standard_text_size"
-        app:layout_constraintStart_toEndOf="@+id/text_do_not_want_to_register"
+        app:layout_constraintStart_toEndOf="@+id/text_do_not_want_to_register_welcome_Activity"
         app:layout_constraintTop_toBottomOf="@id/button_login_welcome_activity"
         android:textStyle="bold"/>
 

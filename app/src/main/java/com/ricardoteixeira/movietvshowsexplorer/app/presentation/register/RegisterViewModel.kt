@@ -81,7 +81,7 @@ class RegisterViewModel @ViewModelInject constructor(
                 }
             } else {
                 viewModelScope.launch {
-                    registerEventChannel.send(RegisterEvent.PasswordLength("Password should have between 8 and 16 characters"))
+                    registerEventChannel.send(RegisterEvent.PasswordLength("Password must have between 8 and 16 characters."))
                 }
             }
 

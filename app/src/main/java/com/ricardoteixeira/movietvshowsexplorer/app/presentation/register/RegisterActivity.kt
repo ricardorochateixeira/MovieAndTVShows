@@ -33,7 +33,7 @@ class RegisterActivity: AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        val view = findViewById<View>(R.id.registerActivity)
+        val view = findViewById<View>(R.id.register_activity)
 
         val intentMovies = Intent(this, MainActivity::class.java)
         val intentWelcome = Intent(this, WelcomeActivity::class.java)

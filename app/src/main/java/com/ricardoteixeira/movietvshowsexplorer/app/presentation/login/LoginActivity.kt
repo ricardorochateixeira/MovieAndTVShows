@@ -18,7 +18,7 @@ import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class LoginActivity() : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private val viewModel: LoginViewModel by viewModels()
 
@@ -29,7 +29,7 @@ class LoginActivity() : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        val view = findViewById<View>(R.id.loginActivity)
+        val view = findViewById<View>(R.id.login_activity)
 
         val intentMovies = Intent(this, MainActivity::class.java)
         val intentWelcome = Intent(this, WelcomeActivity::class.java)

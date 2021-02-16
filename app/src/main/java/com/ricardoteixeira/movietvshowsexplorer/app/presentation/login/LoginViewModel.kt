@@ -66,9 +66,7 @@ class LoginViewModel @ViewModelInject constructor(
     }
 
     fun sendResetPasswordEmail(email: String) {
-
         if (email.isNotEmpty()) {
-
                 mAuth.sendPasswordResetEmail(email).addOnCompleteListener{ task ->
                     if (task.isSuccessful){
                         viewModelScope.launch {

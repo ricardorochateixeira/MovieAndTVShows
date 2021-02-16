@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/moviesFragment">
+    app:startDestination="@id/movies_fragment">
 
     <fragment
-        android:id="@+id/moviesFragment"
+        android:id="@+id/movies_fragment"
         android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.movies.MoviesFragment"
         android:label="Movies"
         tools:layout="@layout/movies_fragment"/>
