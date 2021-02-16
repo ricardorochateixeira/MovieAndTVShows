@@ -68,7 +68,7 @@ class WelcomeActivity : AppCompatActivity() {
             register()
         }
 
-        text_enter_as_guest.setOnClickListener {
+        text_enter_as_guest_welcome_activity.setOnClickListener {
             enterAsAGuest()
         }
     }

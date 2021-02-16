@@ -3,13 +3,11 @@
     <string name="movies">Movies</string>
     <string name="tb_shows">TV Shows</string>
     <string name="people">People</string>
-    <string name="watch">Watch Next</string>
     <string name="top_rated">Top rated</string>
     <string name="upcoming">Upcoming</string>
     <string name="popular">Popular</string>
     <string name="guest">Do not want to create an account</string>
     <string name="login">Log In</string>
-    <string name="go_back_to_login">Go back to login</string>
     <string name="email_address">Email Address</string>
     <string name="do_not_have_an_account">Don´t have an account?</string>
     <string name="register">Register</string>

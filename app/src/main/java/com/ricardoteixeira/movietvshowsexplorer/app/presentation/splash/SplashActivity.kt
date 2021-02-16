@@ -2,11 +2,9 @@ package com.ricardoteixeira.movietvshowsexplorer.app.presentation.splash
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.google.firebase.auth.FirebaseAuth
 import com.ricardoteixeira.movietvshowsexplorer.R
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.MainActivity
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.utils.blink
@@ -14,7 +12,6 @@ import com.ricardoteixeira.movietvshowsexplorer.app.presentation.welcome.Welcome
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.splash_activity.*
 import kotlinx.coroutines.flow.collect
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class SplashActivity: AppCompatActivity() {
