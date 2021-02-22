@@ -3,10 +3,8 @@ package com.ricardoteixeira.movietvshowsexplorer.app.presentation.login
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.ricardoteixeira.movietvshowsexplorer.app.presentation.MainActivity
+import com.ricardoteixeira.movietvshowsexplorer.app.presentation.main.MainActivity
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch

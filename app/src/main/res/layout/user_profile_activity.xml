@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/user_profile_activity">
+
+    <ImageButton
+        android:id="@+id/button_back_user_profile_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margin"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/navigate_to_welcome_screen"/>
+
+    <ImageButton
+        android:id="@+id/button_edit_user_profile_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintStart_toEndOf="@id/text_user_name"
+        android:padding="@dimen/standard_padding"
+        app:layout_constraintBottom_toBottomOf="@id/text_user_name"
+        android:contentDescription="@string/navigate_to_welcome_screen"/>
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:maxWidth="240dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/standard_title_size"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textStyle=""
+        android:layout_margin="@dimen/standard_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_back_user_profile_activity" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_user_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_user_name"
+        app:layout_constraintBottom_toBottomOf="@id/text_user_name"
+        android:layout_margin="@dimen/double_standard_margin">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/double_standard_margin"
+            app:cardCornerRadius="150dp">
+            <ImageView
+                android:id="@+id/image_user_photo"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_avatar_svgrepo_com" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <SearchView
+        android:id="@+id/search_view_user_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/card_user_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/double_standard_margin"
+        android:layout_marginStart="@dimen/double_standard_margin"
+        android:layout_marginEnd="@dimen/double_standard_margin"
+        android:background="@drawable/custom_backgroung"
+        android:queryHint="Search your movies" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_user_profile_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

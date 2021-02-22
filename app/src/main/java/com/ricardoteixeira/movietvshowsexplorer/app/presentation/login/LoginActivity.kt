@@ -7,15 +7,13 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.auth.FirebaseAuth
 import com.ricardoteixeira.movietvshowsexplorer.R
-import com.ricardoteixeira.movietvshowsexplorer.app.presentation.MainActivity
+import com.ricardoteixeira.movietvshowsexplorer.app.presentation.main.MainActivity
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.register.RegisterActivity
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.welcome.WelcomeActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.login_activity.*
 import kotlinx.coroutines.flow.collect
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {

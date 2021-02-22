@@ -17,9 +17,9 @@
         tools:layout="@layout/tv_shows_fragment"/>
     <fragment
         android:id="@+id/watchNextFragment"
-        android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.watchnext.WatchNext"
-        android:label="Watch Next"
-        tools:layout="@layout/watch_next_fragment"/>
+        android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.wathclist.WatchListFragment"
+        android:label="Watchlist"
+        tools:layout="@layout/watch_list_fragment"/>
     <fragment
         android:id="@+id/peopleFragment"
         android:name="com.ricardoteixeira.movietvshowsexplorer.app.presentation.people.PeopleFragment"

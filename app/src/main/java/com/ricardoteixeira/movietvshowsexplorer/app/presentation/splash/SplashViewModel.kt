@@ -32,8 +32,7 @@ class SplashViewModel @ViewModelInject constructor(var mAuth: FirebaseAuth) : Vi
     }
 
     fun checkIfLoggedIn(): Boolean {
-
-        val user = mAuth.currentUser
+        var user = mAuth.currentUser
         isLogged = user != null
         return isLogged
     }

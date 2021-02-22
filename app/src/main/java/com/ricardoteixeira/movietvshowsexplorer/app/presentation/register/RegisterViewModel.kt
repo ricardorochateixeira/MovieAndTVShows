@@ -4,20 +4,23 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.ricardoteixeira.movietvshowsexplorer.app.presentation.MainActivity
+import com.ricardoteixeira.movietvshowsexplorer.app.presentation.main.MainActivity
+import com.ricardoteixeira.movietvshowsexplorer.app.utils.DateUtil
+import com.ricardoteixeira.movietvshowsexplorer.domain.usecases.common.InsertOrUpdateUserProfileUseCase
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import com.ricardoteixeira.movietvshowsexplorer.domain.models.UserProfile
+
 
 class RegisterViewModel @ViewModelInject constructor(
-    private val mAuth: FirebaseAuth,
-    private val mDatabase: DatabaseReference
+    private var mAuth: FirebaseAuth,
+    private val insertOrUpdateUserProfileUseCase: InsertOrUpdateUserProfileUseCase,
+    private val dateUtil: DateUtil
 ) : ViewModel() {
 
     val nameText = MutableStateFlow("")
@@ -64,8 +67,10 @@ class RegisterViewModel @ViewModelInject constructor(
                             if (task.isSuccessful) {
                                 val user = mAuth.currentUser
                                 val uid = user!!.uid
-                                mDatabase.child(uid).child("Name").setValue(name)
+                                val userProfile = UserProfile(name = name, email = email, id = uid, imageUri = "", dateCreated = dateUtil.getCurrentTimeStamp())
+
                                 viewModelScope.launch {
+                                    insertOrUpdateUserProfileUseCase(userProfile)
                                     registerEventChannel.send(RegisterEvent.NavigateToMoviesFragment)
                                 }
                             } else {

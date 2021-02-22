@@ -30,4 +30,6 @@
     <string name="hello_there_welcome_back">Hello there! Welcome back</string>
     <string name="reset_password">Reset password</string>
     <string name="application_logo">Application logo</string>
+    <string name="user_profile_name">Hello %1$s!</string>
+    <string name="cancel">Cancel</string>
 </resources>
