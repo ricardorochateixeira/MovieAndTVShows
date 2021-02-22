@@ -5,17 +5,13 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.google.firebase.auth.FirebaseAuth
 import com.ricardoteixeira.movietvshowsexplorer.R
-import com.ricardoteixeira.movietvshowsexplorer.app.presentation.MainActivity
+import com.ricardoteixeira.movietvshowsexplorer.app.presentation.main.MainActivity
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.login.LoginActivity
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.register.RegisterActivity
-import com.ricardoteixeira.movietvshowsexplorer.app.presentation.utils.blink
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.splash_activity.*
 import kotlinx.android.synthetic.main.welcome_activity.*
 import kotlinx.coroutines.flow.collect
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class WelcomeActivity : AppCompatActivity() {

@@ -3,6 +3,8 @@
     package="com.ricardoteixeira.movietvshowsexplorer">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".app.MoviesTvShowsApplication"
@@ -12,13 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTVShowsExplorer">
 
-        <activity android:name=".app.presentation.MainActivity"/>
+        <activity android:name=".app.presentation.main.MainActivity"/>
         <activity android:name=".app.presentation.login.LoginActivity"
             android:noHistory="true"/>
         <activity android:name=".app.presentation.register.RegisterActivity"
             android:noHistory="true"/>
         <activity android:name=".app.presentation.welcome.WelcomeActivity"
             android:noHistory="true"/>
+        <activity android:name=".app.presentation.userprofile.UserProfileActivity"/>
+        <activity android:name=".app.presentation.edituserprofile.EditUserProfileActivity" />
 
         <activity android:name=".app.presentation.splash.SplashActivity"
             android:noHistory="true">

@@ -6,7 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.ricardoteixeira.movietvshowsexplorer.R
-import com.ricardoteixeira.movietvshowsexplorer.app.presentation.MainActivity
+import com.ricardoteixeira.movietvshowsexplorer.app.presentation.main.MainActivity
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.utils.blink
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.welcome.WelcomeActivity
 import dagger.hilt.android.AndroidEntryPoint

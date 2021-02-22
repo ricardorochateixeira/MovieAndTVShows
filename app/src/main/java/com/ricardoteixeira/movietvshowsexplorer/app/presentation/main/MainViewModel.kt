@@ -1,4 +1,4 @@
-package com.ricardoteixeira.movietvshowsexplorer.app.presentation
+package com.ricardoteixeira.movietvshowsexplorer.app.presentation.main
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
@@ -10,7 +10,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 
-class MainViewModel @ViewModelInject constructor(private val mAuth: FirebaseAuth) : ViewModel() {
+class MainViewModel @ViewModelInject constructor(private var mAuth: FirebaseAuth) : ViewModel() {
 
     var authenticationState = FirebaseUserLiveData(mAuth).map { user ->
         if (user != null) {
@@ -40,6 +40,12 @@ class MainViewModel @ViewModelInject constructor(private val mAuth: FirebaseAuth
         }
     }
 
+    fun navigateToUserFragment() {
+        viewModelScope.launch {
+            mainEventChannel.send(MainEvent.NavigateToUserFragment)
+        }
+    }
+
     enum class AuthenticationState {
         AUTHENTICATED,
         UNAUTHENTICATED
@@ -48,6 +54,7 @@ class MainViewModel @ViewModelInject constructor(private val mAuth: FirebaseAuth
     sealed class MainEvent {
         data class ShowDoYouWantToLogOutDialog(val message: String) : MainEvent()
         data class ShowDoYouWQWantToNavigateToLoginPage(val message: String): MainEvent()
+        object NavigateToUserFragment: MainEvent()
     }
 
 }

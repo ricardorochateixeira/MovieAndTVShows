@@ -1,4 +1,4 @@
-package com.ricardoteixeira.movietvshowsexplorer.app.presentation
+package com.ricardoteixeira.movietvshowsexplorer.app.presentation.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph
@@ -17,7 +16,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.ricardoteixeira.movietvshowsexplorer.R
 import com.ricardoteixeira.movietvshowsexplorer.app.presentation.login.LoginActivity
-import com.ricardoteixeira.movietvshowsexplorer.app.presentation.welcome.WelcomeActivity
+import com.ricardoteixeira.movietvshowsexplorer.app.presentation.userprofile.UserProfileActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.login_activity.*
@@ -30,10 +29,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-
         super.onCreate(savedInstanceState)
 
         val loginIntent = Intent(this, LoginActivity::class.java)
+        val userProfileIntent = Intent(this, UserProfileActivity::class.java)
 
         setContentView(R.layout.activity_main)
 
@@ -70,6 +69,10 @@ class MainActivity : AppCompatActivity() {
                             .setNegativeButton("No") { _, _ -> }
                             .show()
                     }
+
+                    is MainViewModel.MainEvent.NavigateToUserFragment -> {
+                        startActivity(userProfileIntent)
+                    }
                 }
             }
         }
@@ -84,7 +87,7 @@ class MainActivity : AppCompatActivity() {
                 MainViewModel.AuthenticationState.AUTHENTICATED -> {
                     menu?.findItem(R.id.logged)?.title = "Log Out"
                 }
-                else -> {
+                MainViewModel.AuthenticationState.UNAUTHENTICATED  -> {
                     menu?.findItem(R.id.logged)?.title = "Log In"
                 }
             }
@@ -96,34 +99,20 @@ class MainActivity : AppCompatActivity() {
 
         when (item.itemId) {
             R.id.logged -> {
-                viewModel.authenticationState.observe(this, { authenticationState ->
-                    when (authenticationState) {
-                        MainViewModel.AuthenticationState.AUTHENTICATED -> {
-                            showDoYouWantToLogOutDialog()
-                        }
-                        else -> {
-                            showDoYouWQWantToNavigateToLoginPage()
-                        }
-                    }
-                })
+                if (item.title == "Log Out") {
+                    showDoYouWantToLogOutDialog()
+                } else {
+                    showDoYouWQWantToNavigateToLoginPage()
+                }
             }
+            R.id.button_account -> navigateToUserActivity()
         }
 
         return super.onOptionsItemSelected(item)
     }
 
-    private fun observeAuthenticationState() {
-        viewModel.authenticationState.observe(this, { authenticationState ->
-            when (authenticationState) {
-                MainViewModel.AuthenticationState.AUTHENTICATED -> {
-
-                }
-
-                else -> {
-
-                }
-            }
-        })
+    private fun navigateToUserActivity() {
+        viewModel.navigateToUserFragment()
     }
 
     private fun navigateToLogin (intent: Intent) {
@@ -144,5 +133,4 @@ class MainActivity : AppCompatActivity() {
     private fun showDoYouWQWantToNavigateToLoginPage() {
         viewModel.showDoYouWQWantToNavigateToLoginPage()
     }
-
 }
