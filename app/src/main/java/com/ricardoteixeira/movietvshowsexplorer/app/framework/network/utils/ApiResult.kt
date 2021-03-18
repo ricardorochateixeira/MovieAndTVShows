@@ -1,4 +1,4 @@
-package com.ricardoteixeira.movietvshowsexplorer.app.framework.network
+package com.ricardoteixeira.movietvshowsexplorer.app.framework.network.utils
 
 sealed class ApiResult<out T> {
 

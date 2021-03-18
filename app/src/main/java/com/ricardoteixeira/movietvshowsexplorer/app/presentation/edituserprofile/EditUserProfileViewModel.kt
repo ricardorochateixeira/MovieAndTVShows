@@ -39,22 +39,25 @@ constructor(
         _mutableEditUserState.value = Data(isLoading = true)
             viewModelScope.launch(Dispatchers.IO) {
                 getUserProfileUseCase(Unit).collect { userProfile ->
-                    _mutableEditUserState.postValue(Data(isLoading = false, responseType = Status.SUCCESSFUL, data = userProfile))
+                    _mutableEditUserState.postValue(Data(isLoading = false, responseType = Status.SUCCESSFUL, data = userProfile?.data))
                 }
             }
     }
+
+
 
     fun saveUserProfile(userName: String) {
         _mutableLiveDataUserName.value = userName
             viewModelScope.launch {
                 getUserProfileUseCase(Unit).collect { userProfile ->
                     if (_mutableLiveDataImageProfileUri.value != null && _mutableLiveDataUserName.value != null) {
-                        insertOrUpdateUserProfileUseCase(userProfile!!.copy(name = _mutableLiveDataUserName.value!!, imageUri = _mutableLiveDataImageProfileUri.value!!))
+                        insertOrUpdateUserProfileUseCase(userProfile!!.data!!.copy(name = _mutableLiveDataUserName.value!!, imageUri = _mutableLiveDataImageProfileUri.value!!))
                     } else if (_mutableLiveDataImageProfileUri.value == null && _mutableLiveDataUserName.value != null) {
-                        insertOrUpdateUserProfileUseCase(userProfile!!.copy(name = userName))
+                        insertOrUpdateUserProfileUseCase(userProfile!!.data!!.copy(name = userName))
                     }
                 }
         }
+
     }
 
     fun setImageUri(imageUri: String) {

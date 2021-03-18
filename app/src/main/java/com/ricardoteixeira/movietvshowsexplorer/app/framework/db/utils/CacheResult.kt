@@ -1,4 +1,4 @@
-package com.ricardoteixeira.movietvshowsexplorer.app.framework.db
+package com.ricardoteixeira.movietvshowsexplorer.app.framework.db.utils
 
 sealed class CacheResult<out T> {
     data class Success<out T>(val value: T): CacheResult<T>()

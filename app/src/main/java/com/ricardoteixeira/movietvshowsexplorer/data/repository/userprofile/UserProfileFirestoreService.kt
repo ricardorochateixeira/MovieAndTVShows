@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 
 interface GetUserProfile {
-    suspend fun getUserProfile(): Flow<UserProfile?>
+    suspend fun getUserProfile(): UserProfile?
 }
 
 interface DeleteUserProfile {

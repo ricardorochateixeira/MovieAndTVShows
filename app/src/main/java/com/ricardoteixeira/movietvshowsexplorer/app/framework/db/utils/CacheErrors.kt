@@ -1,4 +1,4 @@
-package com.ricardoteixeira.movietvshowsexplorer.app.utils
+package com.ricardoteixeira.movietvshowsexplorer.app.framework.db.utils
 
 object CacheErrors {
 

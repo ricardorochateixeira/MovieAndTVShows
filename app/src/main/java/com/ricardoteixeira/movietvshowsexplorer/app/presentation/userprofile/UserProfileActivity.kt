@@ -92,6 +92,10 @@ class UserProfileActivity: AppCompatActivity() {
     }
 
     override fun onRestart() { initProfile()
+        viewModel.userState.observe(this@UserProfileActivity, Observer {
+            text_user_name.text = getString(R.string.user_profile_name, it.data?.name)
+            image_user_photo.setImageURI(it.data?.imageUri?.toUri())
+        })
         super.onRestart()
     }
 

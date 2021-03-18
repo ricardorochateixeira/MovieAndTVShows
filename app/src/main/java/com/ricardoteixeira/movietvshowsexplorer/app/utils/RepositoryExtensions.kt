@@ -1,12 +1,12 @@
 package com.ricardoteixeira.movietvshowsexplorer.app.utils
 
-import com.ricardoteixeira.movietvshowsexplorer.app.framework.db.CacheResult
-import com.ricardoteixeira.movietvshowsexplorer.app.framework.network.ApiResult
-import com.ricardoteixeira.movietvshowsexplorer.app.utils.CacheErrors.CACHE_ERROR_TIMEOUT
-import com.ricardoteixeira.movietvshowsexplorer.app.utils.CacheErrors.CACHE_ERROR_UNKNOWN
+import com.ricardoteixeira.movietvshowsexplorer.app.framework.db.utils.CacheErrors.CACHE_ERROR_TIMEOUT
+import com.ricardoteixeira.movietvshowsexplorer.app.framework.db.utils.CacheErrors.CACHE_ERROR_UNKNOWN
+import com.ricardoteixeira.movietvshowsexplorer.app.framework.db.utils.CacheResult
+import com.ricardoteixeira.movietvshowsexplorer.app.framework.network.utils.ApiResult
 import com.ricardoteixeira.movietvshowsexplorer.app.utils.GenericErrors.ERROR_UNKNOWN
-import com.ricardoteixeira.movietvshowsexplorer.app.utils.NetworkErrors.NETWORK_ERROR_TIMEOUT
-import com.ricardoteixeira.movietvshowsexplorer.app.utils.NetworkErrors.NETWORK_ERROR_UNKNOWN
+import com.ricardoteixeira.movietvshowsexplorer.app.framework.network.utils.NetworkErrors.NETWORK_ERROR_TIMEOUT
+import com.ricardoteixeira.movietvshowsexplorer.app.framework.network.utils.NetworkErrors.NETWORK_ERROR_UNKNOWN
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.withContext
